@@ -30,7 +30,7 @@
 ;;; Code:
 
 (defconst hatsusato-packages
-  '()
+  '(mozc)
   "The list of Lisp packages required by the hatsusato layer.
 
 Each entry is either:
@@ -58,5 +58,16 @@ Each entry is either:
       - A list beginning with the symbol `recipe' is a melpa
         recipe.  See: https://github.com/milkypostman/melpa#recipe-format")
 
+(defun hatsusato/init-mozc ()
+  (use-package mozc
+    :defer t
+    :commands
+    (hatsusato/enable-mozc-mode
+     hatsusato/disable-mozc-mode
+     hatsusato/toggle-mozc-mode)
+    :custom
+    (default-input-method "japanese-mozc")
+    (mozc-candidate-style 'echo-area)
+    ))
 
 ;;; packages.el ends here
