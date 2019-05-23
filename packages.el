@@ -30,7 +30,9 @@
 ;;; Code:
 
 (defconst hatsusato-packages
-  '(mozc)
+  '(mozc
+    mozc-popup
+    )
   "The list of Lisp packages required by the hatsusato layer.
 
 Each entry is either:
@@ -68,6 +70,12 @@ Each entry is either:
     :custom
     (default-input-method "japanese-mozc")
     (mozc-candidate-style 'echo-area)
+    ))
+(defun hatsusato/init-mozc-popup ()
+  (use-package mozc-popup
+    :after mozc
+    :custom
+    (mozc-candidate-style 'popup)
     ))
 
 ;;; packages.el ends here
