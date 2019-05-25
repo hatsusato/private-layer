@@ -1,16 +1,15 @@
-(configuration-layer/declare-layers '(;; auto-completion
-                                      ;; better-defaults
+(configuration-layer/declare-layers '(auto-completion
                                       emacs-lisp
-                                      ;; git
+                                      git
                                       helm
-                                      ;; markdown
+                                      markdown
                                       multiple-cursors
-                                      ;; org
-                                      ;; (shell :variables
-                                      ;;        shell-default-height 30
-                                      ;;        shell-default-position 'bottom)
-                                      ;; spell-checking
-                                      ;; syntax-checking
+                                      org
+                                      (shell :variables
+                                             shell-default-height 30
+                                             shell-default-position 'bottom)
+                                      (syntax-checking :variables
+                                                       syntax-checking-enable-by-default nil)
                                       treemacs
-                                      ;; version-control
+                                      version-control
                                       ))
