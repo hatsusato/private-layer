@@ -35,4 +35,9 @@
     ))
 (defun dotspacemacs/user-config ()
   (hatsusato/register-fontset (user-login-name) 16)
-  )
+  (custom-set-variables
+   '(custom-file spacemacs--custom-file)
+   '(show-trailing-whitespace t)
+   '(vc-follow-symlinks t)
+   '(web-mode-markup-indent-offset 2)
+   ))
