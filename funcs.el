@@ -33,3 +33,6 @@
     (set-fontset-font fontset-name 'unicode noto-fontspec nil 'append)
     (add-to-list 'default-frame-alist (cons 'font fontset-name))
     ))
+(defun dotspacemacs/user-config ()
+  (hatsusato/register-fontset (user-login-name) 16)
+  )
