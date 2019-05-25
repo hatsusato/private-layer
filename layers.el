@@ -1,4 +1,8 @@
 (configuration-layer/declare-layers '(auto-completion
+                                      (c-c++ :variables
+                                             c-c++-enable-google-style t
+                                             c-c++-enable-clang-support t
+                                             c-c++-default-mode-for-headers 'c++-mode)
                                       emacs-lisp
                                       git
                                       helm
