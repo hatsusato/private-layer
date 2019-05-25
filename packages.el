@@ -32,6 +32,8 @@
 (defconst hatsusato-packages
   '(mozc
     mozc-popup
+    (mozc-el-extensions :location (recipe :fetcher github
+                                          :repo "iRi-E/mozc-el-extensions"))
     )
   "The list of Lisp packages required by the hatsusato layer.
 
@@ -77,5 +79,10 @@ Each entry is either:
     :custom
     (mozc-candidate-style 'popup)
     ))
+(defun hatsusato/init-mozc-el-extensions ()
+  (use-package mozc-cursor-color
+    :after mozc)
+  (use-package mozc-mode-line-indicator
+    :after mozc))
 
 ;;; packages.el ends here
