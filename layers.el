@@ -6,8 +6,11 @@
                                       emacs-lisp
                                       git
                                       helm
+                                      html
+                                      javascript
                                       markdown
                                       multiple-cursors
+                                      ocaml
                                       org
                                       (shell :variables
                                              shell-default-height 30
