@@ -2,13 +2,18 @@
  '(auto-completion
    (c-c++ :variables
           c-c++-enable-google-style t
-          c-c++-enable-clang-support t
-          c-c++-default-mode-for-headers 'c++-mode)
+          c-c++-default-mode-for-headers 'c++-mode
+          c-c++-backend 'lsp-ccls
+          c-c++-adopt-subprojects t
+          c-c++-lsp-sem-highlight-method 'font-lock
+          c-c++-lsp-sem-highlight-rainbow t)
+   dap
    emacs-lisp
    git
    helm
    html
    javascript
+   lsp
    markdown
    multiple-cursors
    ocaml
