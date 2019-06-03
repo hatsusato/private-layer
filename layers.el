@@ -13,7 +13,8 @@
    helm
    html
    javascript
-   lsp
+   (lsp :variables
+        lsp-ui-sideline-enable nil)
    markdown
    multiple-cursors
    neotree
