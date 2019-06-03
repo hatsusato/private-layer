@@ -16,6 +16,7 @@
    lsp
    markdown
    multiple-cursors
+   neotree
    ocaml
    org
    (shell :variables
