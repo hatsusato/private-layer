@@ -10,6 +10,8 @@
           c-c++-enable-organize-includes-on-save t
           c-c++-lsp-sem-highlight-method 'font-lock
           c-c++-lsp-sem-highlight-rainbow t)
+   (cmake :variables
+          cmake-enable-cmake-ide-support t)
    dap
    emacs-lisp
    git
