@@ -29,6 +29,7 @@
          (noto-font "Noto Sans CJK JP")
          (noto-fontspec (font-spec :family noto-font)))
     (create-fontset-from-fontset-spec plain-fontspec)
+    (set-fontset-font fontset-name 'ascii mono-fontspec nil 'append)
     (set-fontset-font fontset-name 'unicode mono-fontspec nil 'append)
     (set-fontset-font fontset-name 'unicode noto-fontspec nil 'append)
     (add-to-list 'default-frame-alist (cons 'font fontset-name))
