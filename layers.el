@@ -3,11 +3,11 @@
    (c-c++ :variables
           c-c++-adopt-subprojects t
           c-c++-backend 'lsp-ccls
-          c-c++-default-mode-for-headers 'c++-mode
+          ;; c-c++-default-mode-for-headers 'c++-mode
           c-c++-enable-clang-format-on-save t
           c-c++-enable-google-style t
-          ;; c-c++-enable-google-newline t
           c-c++-enable-organize-includes-on-save t
+          c-c++-lsp-cache-dir (concat spacemacs-cache-directory "lsp-ccls")
           c-c++-lsp-sem-highlight-method 'font-lock
           c-c++-lsp-sem-highlight-rainbow t)
    (cmake :variables
@@ -27,6 +27,7 @@
    org
    python
    rust
+   semantic
    (shell :variables
           shell-default-height 30
           shell-default-position 'bottom)
