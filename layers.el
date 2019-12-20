@@ -36,4 +36,5 @@
                     syntax-checking-enable-by-default nil)
    treemacs
    version-control
+   yaml
    ))
