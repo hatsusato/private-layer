@@ -36,6 +36,10 @@
     ))
 (defun dotspacemacs/user-config ()
   (hatsusato/register-fontset (user-login-name) 16)
+  (use-package tex
+    :config
+    (add-to-list 'TeX-command-list '("Make" "make" TeX-run-command nil t))
+    )
   (custom-set-variables
    '(custom-file spacemacs--custom-file)
    '(show-trailing-whitespace t)
