@@ -2,3 +2,4 @@
 (bind-key* "<henkan>" 'hatsusato/enable-mozc-mode)
 (bind-key* "<muhenkan>" 'hatsusato/disable-mozc-mode)
 (bind-key* "<zenkaku-hankaku>" 'hatsusato/toggle-mozc-mode)
+(bind-key* "C-SPC" 'evil-force-normal-state)
