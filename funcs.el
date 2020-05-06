@@ -42,8 +42,9 @@
     )
   (custom-set-variables
    '(custom-file spacemacs--custom-file)
+   '(projectile-indexing-method 'hybrid)
+   '(sh-basic-offset 2)
    '(show-trailing-whitespace t)
    '(vc-follow-symlinks t)
    '(web-mode-markup-indent-offset 2)
-   '(projectile-indexing-method 'hybrid)
    ))
