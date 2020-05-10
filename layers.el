@@ -20,7 +20,7 @@
    ;; javascript
    (lsp :variables
         lsp-ui-sideline-enable nil)
-   ;; latex
+   ;; (latex :variables latex-build-command "Make")
    markdown
    multiple-cursors
    neotree
