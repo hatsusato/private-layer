@@ -34,6 +34,7 @@
           shell-default-position 'bottom)
    (syntax-checking :variables
                     syntax-checking-enable-by-default nil)
+   ;; systemd
    treemacs
    version-control
    yaml
