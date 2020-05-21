@@ -6,8 +6,16 @@
              (load-file path)
              (boundp 'hatsusato/layers-whitelist))
         hatsusato/layers-whitelist nil)))
+(defun hatsusato/declare-layers (layers)
+  (let* ((whitelist (hatsusato/load-whitelist))
+         (unwrap (lambda (x) (if (atom x) x (car x))))
+         (is-white (lambda (layer)
+                     (seq-find (lambda (white)
+                                 (eq white (funcall unwrap layer)))
+                               whitelist))))
+    (configuration-layer/declare-layers (seq-filter is-white layers))))
 
-(configuration-layer/declare-layers
+(hatsusato/declare-layers
  '(auto-completion
    ;; (c-c++ :variables
    ;;        c-c++-adopt-subprojects t
