@@ -1,3 +1,12 @@
+(defun hatsusato/load-whitelist ()
+  (let* ((file "layers-whitelist.el")
+         (dir (file-name-directory load-file-name))
+         (path (concat dir file)))
+    (if (and (file-readable-p path)
+             (load-file path)
+             (boundp 'hatsusato/layers-whitelist))
+        hatsusato/layers-whitelist nil)))
+
 (configuration-layer/declare-layers
  '(auto-completion
    ;; (c-c++ :variables
