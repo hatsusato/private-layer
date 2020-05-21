@@ -48,3 +48,9 @@
    '(vc-follow-symlinks t)
    '(web-mode-markup-indent-offset 2)
    ))
+(defun hatsusato/message-tail (format &rest args)
+  (let ((window (get-buffer-window "*Messages*")))
+    (if window
+        (with-current-buffer (window-buffer window)
+          (set-window-point window (point-max))))))
+(advice-add #'message :after #'hatsusato/message-tail)
