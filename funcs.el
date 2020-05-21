@@ -34,7 +34,7 @@
     (set-fontset-font fontset-name 'unicode noto-fontspec nil 'append)
     (add-to-list 'default-frame-alist (cons 'font fontset-name))
     ))
-(defun dotspacemacs/user-config ()
+(defun hatsusato/user-config ()
   (hatsusato/register-fontset (user-login-name) 16)
   (use-package tex
     :config
@@ -53,4 +53,5 @@
     (if window
         (with-current-buffer (window-buffer window)
           (set-window-point window (point-max))))))
+(advice-add #'dotspacemacs/user-config :after #'hatsusato/user-config)
 (advice-add #'message :after #'hatsusato/message-tail)
