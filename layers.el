@@ -1,3 +1,12 @@
+(defun hatsusato/load-files (files)
+  (let* ((file (if (consp files) (car files)))
+         (dir (if load-file-name (file-name-directory load-file-name)))
+         (path (concat dir file)))
+    (if (null files)
+        nil
+      (if (and (file-readable-p path) (load-file path))
+          t
+        (hatsusato/load-files (cdr files))))))
 (defun hatsusato/load-whitelist ()
   (let* ((file "layers-whitelist.el")
          (dir (file-name-directory load-file-name))
@@ -15,6 +24,7 @@
                                whitelist))))
     (configuration-layer/declare-layers (seq-filter is-white layers))))
 
+(hatsusato/load-files '(".whitelist.el" "whitelist.el"))
 (hatsusato/declare-layers
  '(auto-completion
    (c-c++ :variables
