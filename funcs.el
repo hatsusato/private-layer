@@ -28,7 +28,7 @@
     (if window
         (with-current-buffer (window-buffer window)
           (set-window-point window (point-max))))))
-(defun hatsusato/user-config ()
+(defun hatsusato/custom-set-variables ()
   (custom-set-variables
    '(custom-file spacemacs--custom-file)
    '(lsp-enable-file-watchers nil)
@@ -37,11 +37,14 @@
    '(show-trailing-whitespace t)
    '(vc-follow-symlinks t)
    '(web-mode-markup-indent-offset 2)
-   )
+   ))
+(defun hatsusato/user-config ()
+  (hatsusato/custom-set-variables)
   (hatsusato/init-tex)
   (if (display-graphic-p)
       (hatsusato/setup-font (selected-frame))
-    (add-hook 'after-make-frame-functions #'hatsusato/setup-font)))
+    (add-hook 'after-make-frame-functions #'hatsusato/setup-font))
+  )
 
 (advice-add #'dotspacemacs/user-config :after #'hatsusato/user-config)
 (advice-add #'message :after #'hatsusato/message-tail)
