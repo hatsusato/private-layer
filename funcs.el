@@ -38,11 +38,7 @@
    '(vc-follow-symlinks t)
    '(web-mode-markup-indent-offset 2)
    )
-  (use-package tex
-    :defer t
-    :config
-    (add-to-list 'TeX-command-list '("Make" "make" TeX-run-command nil t))
-    )
+  (hatsusato/init-tex)
   (if (display-graphic-p)
       (hatsusato/setup-font (selected-frame))
     (add-hook 'after-make-frame-functions #'hatsusato/setup-font)))

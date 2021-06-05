@@ -84,5 +84,11 @@ Each entry is either:
     :after mozc)
   (use-package mozc-mode-line-indicator
     :after mozc))
+(defun hatsusato/init-tex ()
+  (use-package tex
+    :defer t
+    :config
+    (add-to-list 'TeX-command-list '("Make" "make" TeX-run-command nil t))
+    ))
 
 ;;; packages.el ends here
