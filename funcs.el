@@ -1,6 +1,3 @@
-(defconst hatsusato/font-size 16)
-(defconst hatsusato/ascii-font "Ubuntu Mono")
-(defconst hatsusato/unicode-font "Noto Sans Mono CJK JP")
 (defun hatsusato/enable-mozc-mode ()
   "Enable mozc-mode."
   (interactive)
