@@ -1,0 +1,5 @@
+(let* ((file ".config.el")
+       (dir (if load-file-name (file-name-directory load-file-name)))
+       (path (concat dir file)))
+  (if (file-readable-p path)
+      (load-file path)))
