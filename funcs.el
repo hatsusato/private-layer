@@ -23,6 +23,10 @@
         (set-fontset-font frame-font 'unicode unicode nil 'append)
         (remove-hook 'after-make-frame-functions #'hatsusato/setup-font)
         )))
+(defun hatsusato/setup-on-frame (frame)
+  (hatsusato/setup-font frame)
+  (spacemacs/enable-transparency frame)
+  (remove-hook 'after-make-frame-functions #'hatsusato/setup-on-frame))
 (defun hatsusato/message-tail (format &rest args)
   (let ((window (get-buffer-window "*Messages*")))
     (if window
@@ -41,9 +45,8 @@
 (defun hatsusato/user-config ()
   (hatsusato/custom-set-variables)
   (hatsusato/init-tex)
-  (if (display-graphic-p)
-      (hatsusato/setup-font (selected-frame))
-    (add-hook 'after-make-frame-functions #'hatsusato/setup-font))
+  (if (display-graphic-p) (hatsusato/setup-on-frame (selected-frame))
+    (add-hook 'after-make-frame-functions #'hatsusato/setup-on-frame))
   )
 
 (advice-add #'dotspacemacs/user-config :after #'hatsusato/user-config)
