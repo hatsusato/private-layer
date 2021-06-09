@@ -1,4 +1,4 @@
-(defconst hatsusato/font-size 16)
+(defconst hatsusato/font-size 12.0)
 (defconst hatsusato/ascii-font "Ubuntu Mono")
 (defconst hatsusato/unicode-font "Noto Sans Mono CJK JP")
 
@@ -7,3 +7,12 @@
        (path (concat dir file)))
   (if (file-readable-p path)
       (load-file path)))
+
+(defconst dotspacemacs-scratch-buffer-persistent t)
+(defconst dotspacemacs-enable-paste-transient-state t)
+(defconst dotspacemacs-mode-line-unicode-symbols 'display-graphic-p)
+(defconst dotspacemacs-line-numbers 'relative)
+(defconst dotspacemacs-smartparens-strict-mode t)
+(defconst dotspacemacs-smart-closing-parenthesis t)
+(defconst dotspacemacs-pretty-docs t)
+(defconst dotspacemacs-byte-compile t)
