@@ -2,6 +2,8 @@
 (bind-key* "<hiragana-katakana>" 'hatsusato/enable-mozc-mode)
 (bind-key* "<muhenkan>" 'hatsusato/disable-mozc-mode)
 (bind-key* "<zenkaku-hankaku>" 'hatsusato/toggle-mozc-mode)
+(bind-key* "<Hangul>" 'hatsusato/enable-mozc-mode)
+(bind-key* "<Hangul_Hanja>" 'hatsusato/disable-mozc-mode)
 (bind-key* "C-<henkan>" 'hatsusato/enable-mozc-mode)
 (bind-key* "C-<hiragana-katakana>" 'hatsusato/enable-mozc-mode)
 (bind-key* "C-<muhenkan>" 'hatsusato/disable-mozc-mode)
