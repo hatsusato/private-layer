@@ -35,6 +35,7 @@
 (defun hatsusato/custom-set-variables ()
   (custom-set-variables
    '(custom-file spacemacs--custom-file)
+   '(evil-escape-key-sequence "")
    '(lsp-enable-file-watchers nil)
    '(projectile-indexing-method 'hybrid)
    '(sh-basic-offset 2)
