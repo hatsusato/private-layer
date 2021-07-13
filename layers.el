@@ -56,6 +56,7 @@
    neotree
    ocaml
    org
+   (php :variables php-backend 'lsp)
    python
    rust
    semantic
