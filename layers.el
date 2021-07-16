@@ -48,6 +48,8 @@
    helm
    html
    (javascript :variables
+               js-indent-level 2
+               js2-basic-offset 2
                js2-mode-show-strict-warnings nil
                javascript-fmt-tool 'web-beautify
                javascript-fmt-on-save t)
