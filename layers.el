@@ -47,7 +47,10 @@
    git
    helm
    html
-   javascript
+   (javascript :variables
+               js2-mode-show-strict-warnings nil
+               javascript-fmt-tool 'web-beautify
+               javascript-fmt-on-save t)
    (lsp :variables
         lsp-ui-sideline-enable nil)
    (latex :variables latex-build-command "Make")
