@@ -62,7 +62,12 @@
    ocaml
    org
    (php :variables php-backend 'lsp)
-   python
+   (python :variables
+           python-backend 'lsp
+           python-lsp-server 'pylsp
+           python-formatter 'yapf
+           python-format-on-save t
+           python-sort-imports-on-save t)
    rust
    semantic
    (shell :variables
