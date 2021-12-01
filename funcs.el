@@ -38,6 +38,7 @@
    '(evil-escape-key-sequence nil)
    '(evil-move-beyond-eol t)
    '(lsp-enable-file-watchers nil)
+   '(lsp-ui-doc-enable nil)
    '(projectile-indexing-method 'hybrid)
    '(sh-basic-offset 2)
    '(show-trailing-whitespace t)
